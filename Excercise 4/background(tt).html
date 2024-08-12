@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bg0{
+        background-image:url(../image/bg2.jpg) ;
+        width:700px;
+        height: 400px;
+        background-size: auto auto;
+        background-repeat: repeat;
+        border: 20px solid black;
+
+        background-position:top left;
+        /* đây là mặc định vị trí bắt đầu ảnh với top( bên trên) dọc, 
+        left bên trái ngang */
+
+        background-attachment: fixed;
+        /* ảnh đc cố định scroll thì ảnh đứng yên */
+        }     
+</style>
+<body>
+    <h1 class="bg0">Đây là ảnh mặc định là repeat</h1>
+    <h1 class="bg0" style="background-repeat: no-repeat;">Không còn lặp lại</h1>
+    <h1 class="bg0" style="background-repeat: repeat-x;">lặp lại theo chiều ngang</h1>
+    <h1 class="bg0" style="background-repeat: repeat-y;">lặp lại theo chiều dọc</h1>
+    <h1 class="bg0" style="background-repeat: no-repeat;
+    background-position: center right;">nằm bên phải chính giữa</h1>
+    <!-- có top left bottom right -->
+    <h1 class="bg0" style="background-repeat: no-repeat;
+    background-position: bottom 30px right 20px;">nằm dưới góc phải</h1>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, asperiores facere id accusantium voluptates quia ipsam magni. Debitis ea asperiores ipsam quos? Eius doloremque nesciunt ullam vel harum, odio accusamus!</p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, asperiores facere id accusantium voluptates quia ipsam magni. Debitis ea asperiores ipsam quos? Eius doloremque nesciunt ullam vel harum, odio accusamus!</p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, asperiores facere id accusantium voluptates quia ipsam magni. Debitis ea asperiores ipsam quos? Eius doloremque nesciunt ullam vel harum, odio accusamus!</p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, asperiores facere id accusantium voluptates quia ipsam magni. Debitis ea asperiores ipsam quos? Eius doloremque nesciunt ullam vel harum, odio accusamus!</p>
+
+</body>
+</html>
