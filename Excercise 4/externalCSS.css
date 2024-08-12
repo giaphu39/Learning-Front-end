@@ -1,0 +1,13 @@
+header{
+    background-color: bisque;
+
+}
+body{
+    background-color: cornflowerblue;
+}
+.s1{
+    color:#E5F8C1;
+    /* dùng app copy mã rồi bấm# để ghi đc mã màu RGB */
+    font-size: xx-large;
+}
+/* Nhớ class thì . */

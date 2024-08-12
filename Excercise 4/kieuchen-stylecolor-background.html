@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="externalCSS.css">
+    <!-- dòng link css này là kiểu chèn externalCSS, thẻ link buộc phải
+     trong head -->
+    <style>
+        p{
+            color: chartreuse;
+        }
+/* Css internal chỉ áp dụng cho 1 trang */
+
+    </style>
+</head>
+<body>
+    <header>Header của trang</header>
+    <p style="color: red; font-size: medium;">Kiểu chèn CSS Inline(nội tuyến)</p>
+    <!-- áp dụng kiểu chèn inline cho 1 giá trị duy nhất đặc biệt muốn đổi -->
+    <p>Kiểu chèn CSS Internal (nội bộ) </p>
+    <h1 class="s1">Kiểu chèn CSS external(bên ngoài)</h1>
+    <style>
+        h2{
+            color: aquamarine;
+            size: 70px;
+        }
+        h2{
+            color: chartreuse;
+        }
+    </style>
+    <h2 class="s2">Nếu css nhiều cho 1 đối tượng thì sẽ hiện cái sau cùng nhất
+    <h2 class="s1 s2">Nếu 1 element có nhiều 
+        class thì sẽ chọn class sau cùng không tính theo thứ tự 
+    </h2>
+
+    <style>
+        .bg0{
+            background-image:url(../image/bg1.jpg) ;
+            width:1500px;
+            height: 1200px;
+            background-size: auto auto;
+        } 
+        /* background-size chỉ là thay đổi ảnh không phải thay
+         đổi kích thước trên trang */
+        .bg1{
+            background-image: url(../image/bg1.jpg);
+            width: 500px;
+            height: 500px;
+        }
+        .bg2{
+            background-image: url(../image/bg2.jpg);
+            background-size: 100% auto;
+            /* chiều rộng 100% chiều cao auto */
+            background-size: contain;
+            /* contain giúp ta co giãn ảnh không bị bể 
+            khi thay đổi width và height;
+            Nếu background-size:cover
+            thì sẽ co dãn theo border (khung) nhưng cắt đi phần thừa */
+            
+        }
+        /* ảnh jpg không trong suốt còn png thì trong suốt nên ai viết trước
+        thì đè lên trên */
+        .bg3{
+            background-image: url(../image/pikachu.png), url(../image/bg1.jpg);
+            width: 1500px;
+            height: 1000px;   
+            background-image: linear-gradient(180deg,#0000,#983421);
+            /* linear-gradient(độ thay đổi,màu bắt đầu, màu kết thúc)          */
+        }
+    </style>
+
+    <h1 class="bg0">Ảnh gắn auto</h1>
+
+
+    <h3 class="bg2">Gắn background ảnh</h3>
+    <div class="bg1">
+        background img
+    </div>
+    <div class="bg3">ảnh chèn png và jpg</div>
+
+</body>
+</html>

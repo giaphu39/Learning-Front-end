@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div span{
+            color: red;
+        }
+        .m1{
+            color: blue!important;
+            /* dù độ ưu tiên thấp hơn inline song dùng !important thì sẽ ưu tiên nhất */
+        }
+    </style>
+</head>
+<body>
+    <div class="m1" title="title1" style="color: rgb(229, 255, 0);">Xin chào everybody</div>
+    <div class="m2" title="title2"><span>X</span>in chào everybody</div>   
+    <!-- thẻ span sẽ ko xuống dòng -->
+    <style>
+        /* [data-text]::before { */
+            /* hoặc */
+        span::before{
+            content: attr(data-text);
+        }
+    </style>
+    <span data-text="Xin chào ">Đặng Phương Nam</span>
+        <!-- data-text giống một biến const-->
+</body>
+</html>

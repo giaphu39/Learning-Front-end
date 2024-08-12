@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<!-- link font lấy từ GG font -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- nhúng icon -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        body{
+            font-family: "Inter", sans-serif;
+        }
+        .text1{
+            color: blue;
+            /* màu chữ */
+            text-align: justify;
+            /* justify căn lề 2 bên */
+            text-transform: uppercase;
+            /* uppercase viết hoa tất cả các chữ
+            lowercase viết thường tất cả các chữ
+            capitalize viết hoa các chữ cái đầu */
+            font-family: "Merriweather", serif;
+            /* dùng font đc import ở trên */
+            font-style: italic;
+            /* normal , italic ( chữ nghiêng), oblique (nghiêng hơn italic) */
+            font-weight: 300;
+            /* độ dày mỏng của chữ */
+
+        }
+        .box1{
+            background-color: blanchedalmond;
+            color: black;
+            margin: 10px;
+            padding: 50px;
+            height: 100px;
+            /* height thì tăng chiều cao từ chữ đến padding */
+            /* height đc tính trong phần content  do box-sizing mặc định là
+            content-box*/
+            border: 10px solid red;
+        }
+        .box2{
+            box-sizing: border-box;
+            /* chiều cao sẽ đc tính = cả box từ border  */
+            background-color: blanchedalmond;
+            color: black;
+            padding: 50px;
+            /* không đc để padding cao hơn height */
+        
+            border: 10px solid red;
+            height: 100px;
+            margin: 10px;
+            /* nếu padding+ content+ border > height thì sẽ tràn ra -> lỗi; */
+            /* box 2 dù đặt là 100px cả khối box nhưng paddingx2 + borderx2 =120 */
+        }
+        .box3{
+            box-sizing: border-box;
+            background-color: blanchedalmond;
+            color: black;
+            padding: 20px;
+
+            border: 10px solid red;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">Nội dung box 1</div>
+    <div class="box2">Nội dung box 2</div>
+    <div class="box3 , text1">Nội dung box 3 <br>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, minima quia! Eveniet beatae, perspiciatis nostrum, consequuntur dolorem in impedit rerum reprehenderit iure alias, ullam placeat omnis delectus dolorum debitis voluptatibus.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vel perspiciatis. Dolores aperiam, nobis deserunt nihil enim soluta laboriosam neque maxime. Dolores ab eius optio voluptatum dignissimos voluptatibus, alias excepturi!
+    </div>
+    <h1>Thẻ h1 luôn mặc định font-weight: bold;</h1>
+    <h1> Danh sách sản phẩm </h1>
+    <ul>
+        <li ><i class="fa-brands fa-facebook" style="color: blue;"></i></li>
+        <!-- phải khai báo link ở head trc  -->
+        <!-- đc tính như thẻ text nên dùng thuộc tính thẻ text -->
+         <li><i class="fa-brands fa-discord"></i></li>
+    </ul>
+</body>
+</html>

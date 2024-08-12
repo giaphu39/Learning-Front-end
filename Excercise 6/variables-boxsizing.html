@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* khai báo biến toàn cục ( global) */
+        :root{
+            --color1: #ff0000;
+            --color2: blue;
+        }
+        h2{
+            color: var(--color2);
+
+            /* khai báo biến cục bộ (local) */
+            --color3: green;
+            background-color: var(--color3);
+        }
+        p{
+            color: var(--color1);
+            background-color: var(--color3);
+            /* không dùng đc vì đó --color3 là biến cục bộ của h2 */
+        }
+        .box{
+            border: 4px solid #000;
+            padding: 30px;
+            width: 200px;
+            height: 100px;
+            /* width: height chỉ áp dụng cho phần content còn
+            tổng thể phải cộng padding và border; */
+            background-color: grey;
+            /* phải thêm thuộc tính boxsizing thì width: height mới của cả box; */
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Nội dung thẻ h2</h2>
+    <p> nội dung thẻ p</p>
+    <div class="box">Nội dung box</div>
+</body>
+</html>

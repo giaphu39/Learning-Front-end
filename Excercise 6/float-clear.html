@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border: 5px solid rgb(255, 0, 0);
+            
+        }
+        .child{
+            color: aliceblue;
+            font-size: 20px;
+            text-align: center;
+            padding:20px;
+        }
+
+        .A{
+            height: 100px;
+            background-color: rgb(251, 247, 5);
+            float: left;
+        }
+        .B{
+            height:150px;
+            background-color: rgb(7, 255, 7);
+            float: right;
+        }
+        .C{
+            height: 200px;
+            background-color: rgb(96, 250, 243);
+            float:left
+            /* clear: right; */
+            /* Chiếm vùng cả 2 clear: both */
+        }
+        /* nếu các child đều float thì parent sẽ ko bao đc 3 thằng .child
+        ->dùng clear vói điệu kiện phẩn tủ trc đó dùng float:left thì clear này 
+        là clear:left */
+        /* C2 nếu muốn cả 3 đều float thì tạo element có height =0 khác 
+        rồi clear:both */
+        .fit{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="A child">Phần tử A</div>
+        <div class="B child" >Phần tử B</div>
+        <div class="C child">Phần tử C</div>
+        <div class="fit"></div>
+    </div>
+    <!-- phần ví dụ -->
+    <style>
+        .box{
+            /* border: 3px solid #000; */
+            background-color: rgba(180, 155, 155, 0.847);
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: Arial;
+            margin:5px;
+        }
+        .sidebar1{
+            width: 25%;
+            float: left;
+
+        }
+        .sidebar2{
+            width: 25%;
+            float: right;
+        }
+        .artical{
+            /* width: calc(50%-30px); */
+            width: calc(50% - 30px);
+            float: left;
+        }
+/* footer bị ghi đè lên do main nhỏ xíu */
+        .fix{
+            clear: both;
+        }
+        /* sai vị trí sidebar2 bị xuống do cốc cốc  */
+
+
+    </style>
+
+
+    <!-- phần ví dụ -->
+    <div class="box head">Header</div>
+    <div class="main">
+        <div class="box sidebar1">sidebar1</div>
+        <div class="box artical">artical</div>
+        <div class="box sidebar2">sidebar2</div>
+        <div class="fix"></div>
+    <div class="box footer">footer</div>
+
+    </div>
+
+</body>
+</html>
