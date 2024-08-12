@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.w3schools.com/action_page.php" target="_blank">
+        <label for="">Họ tên bạn là gì</label>
+        <!-- nếu không có for cho id của input thì 2 cái ko liên kết gì với nhau
+        nếu có thì 2 cái liên kết bấm vào label sẽ trỏ tới input -->
+        <input name="Họ tên">
+        <input type="submit" value="xác nhận">
+        <label for="lop">Lớp bạn là gì</label>
+
+        <input id="lop" name="Lớp">
+        <label>Màu yêu thích là?</label>
+        <select size="2" name="mau" multiple>
+            <!-- size hiển thị bao nhiêu giá trị -->
+            <!-- multiple đc chọn nhiều giá trị -->
+            <!-- giá trị trong name sẽ đc gửi lên server tạo url -->
+            <option value="red">Đỏ</option>
+            <option value="Black" selected>Đen</option>
+            <option value="White">trắng</option>
+<!-- phải có value trong option mà input ko cần vì khi đưa lên server sẽ đưa valua
+ko đưa giá trị text trong option -->
+        </select>
+        <!-- nếu ko selected thì mặc định là cái đầu trong select -->
+         <!-- Nếu có 2 selected thì sẽ chọn cái cuối dòng code -->
+        <label>ghi chú</label>
+        <textarea name="note" rows="5" cols="50"></textarea>
+        <button> Gửi</button>
+        <!-- input submit chỉ dùng cho form còn button dùng cho nhiều nơi đc -->
+
+
+        <input name="nhapchuvaso" type="text">
+        <input type="email">
+        <input type="password">
+        <input type="number">
+        <input type="date">
+        <input type="time">
+        <input type="time">
+        <input type="file">
+        <input type="checkbox">
+        <!-- làm thực tế nhớ có name và id -->
+        <input type="range" min="-5" max="45" step="5" name="volume">
+        <input type="color">
+        <label>Nick name</label>
+        <input type="text" name="nickname" maxlength="5"
+        placeholder="nickname là?" required
+        >
+        <!-- value cho giá trị ban đầu -->
+    </form>
+</body>
+</html>

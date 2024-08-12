@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1{
+            color: aqua;
+        }
+        p{
+            font-size: 20px;
+        }
+        /* chọn css theo element */
+
+        #ca{
+            color:fuchsia
+        }
+     /* viết theo id để vừa có thuộc tính của p nhưng phân biệt các p với
+     nhau, tuy nhiên hạn chế dùng id mà nên dùng class để có thể reuse */
+     /* đây là cách chọn css theo id */
+        .people{
+            color: blue;
+        }
+        *{
+            text-align: center;
+        }
+        /* chọn tất cả css */
+        h1,#ca, .people{
+            background-color:aquamarine  ;;
+        }
+
+    </style>
+    <h1>Nội dung h1</h1>
+    <p> Nội dung thẻ p</p>
+    <p id="ca"> Có một con cá css rất ngon</p>
+    <p class="people"> có một chị css rất xinnh</p>
+    <h2 class="people">một người xinh đẹp là một người biết css</h2>
+    
+</body>
+</html>

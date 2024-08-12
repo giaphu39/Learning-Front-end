@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    h1{
+        color: red;
+        font-size: 80px;
+    }
+
+    /* media queries */
+    @media screen and (max-width:1024px) {
+        /* 1024px cho ipad */
+        h1{
+            font-size: 60px;
+            color: green ;
+        }
+    }
+    @media screen and (max-width:768px){
+        /* 768px cho ipad dọc */
+        /* phải ghi theo đúng thứ tự từ lớn đến bé thì dùng max-width: ;
+        vì đây đi theo độ ưu tiên */
+        h1{
+            font-size: 40px;
+            color: yellow;
+        }
+    }
+    @media screen and (max-width:480px) {
+        /* cho điện thoại */
+        /* nhớ chỗ and phải cách ra rồi mới ghi */
+        h1{
+            font-size: medium;
+            color: aqua;
+        }
+    }
+    @media screen and (max-width:320px) {
+        /* cho điện thoại nhỏ */
+        h1{
+            font-size: small;
+            color:orange;
+        }
+        
+    }
+    </style>
+</head>
+<body>
+    <img src="https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=450%2Cq=70%2Csharpen=1%2Cwidth=1096/wp-content/uploads/look-up-at-the-sky-day-1.jpg"
+    >
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quod aliquam ad quasi, ipsam debitis facilis nam nihil voluptatum, iure et omnis earum perferendis fugit, adipisci eos hic assumenda commodi.</h1>
+</body>
+</html>

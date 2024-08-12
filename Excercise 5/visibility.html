@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline,.block,.inlineblock{
+            background-color: aquamarine;
+            border: 1px solid #000;
+        }
+        /* mặc định span display: inline */
+        .block{
+            display: block;
+            width: 300px;
+            height: 150px;
+            margin-top: 10px;
+            margin-left: 20px;
+            /* tự động thêm bên phải các khoảng trống (kiểu block) */
+            /* cho phép đặt width: height: margin: ;;; */
+        }
+        .inlineblock{
+            display: inline-block;
+            /* giống inline: ko tạo khoảng trống
+            giống block: đc tạo chiều rộng, chiều cao, margin */
+        }
+        /* inline: không đặt được chiều rộng và chiều cao, không thêm được margin và 
+        padding cho bên trên và bên dưới nếu thêm thì sẽ ghi đè lên chữ */
+        .none{
+            color:red;
+            display: none;
+            /* ẩn đi hoàn toàn ko chiếm diện tích */
+        }
+        .visibility{
+            color: green;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur<span class="inline"> Inline1</span>
+    adipisicing elit. Quod,<span class="inline"> Inline2</span> nemo in odit, placeat labore, reiciendis odio ipsa quam beatae recusandae dolorem veniam quasi. Facilis mollitia voluptates consequatur totam neque labore!</p>
+    <p>Lorem ipsum dolor sit amet consectetur<span class="block"> Block1</span>
+        adipisicing elit. Quod,<span class="block"> Block2</span> nemo in odit, placeat labore, reiciendis odio ipsa quam beatae recusandae dolorem veniam quasi. Facilis mollitia voluptates consequatur totam neque labore!</p>
+    <p>Lorem ipsum dolor sit amet consectetur<span class="inlineblock">inline -Block1</span>
+        adipisicing elit. Quod,<span class="inlineblock"> inline-Block2</span> nemo in odit, placeat labore, reiciendis odio ipsa quam beatae recusandae dolorem veniam quasi. Facilis mollitia voluptates consequatur totam neque labore!</p>
+    <p class="none">Đoạn văn có class="none"</p>
+    <p class="visibility">Đoạn văn có visibility:hidden thì sẽ ẩn nhưng chiếm diện tích</p>
+    <p class="visibility" style="visibility: visible;">Đoạn văn có visibility:visible thì trở lại bình thường</p>   
+</body>
+</html>

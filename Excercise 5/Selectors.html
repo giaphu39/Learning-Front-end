@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Adjacent sibling selectors  */
+        p+div{
+            background-color: yellow;
+            /* do sau p là thẻ div nên chọn các element trong thẻ div đó 
+            -> áp dùng cho tất cả element thỏa điều kiện vị trí này*/
+            /* tìm element2 ngay sau element1 */
+            /* Nếu sau thẻ p là h1 thì không có cái nào thỏa  */
+        }
+        div~p{
+            background-color: aquamarine;
+            /* Giống + nhưng áp dụng cho tất cả đằng sau 
+            tag01( ko cần điệu kiện nằm sau liền kề) */
+
+        }
+        a>p{
+            background-color: blue;
+            /* Css Tag 02 Cho cấp con đầu tiên */
+
+        }
+        header p{
+            background-color: rgb(255, 132, 132);
+        }
+    </style>
+</head>
+<body>
+    <p>Nội dung 0</p>
+    <div>
+        <p>Nội dung 1</p>
+        <p>Nội dung 2</p>
+    </div>
+    <p>Nội dung 3</p>
+    <p>Nội dung 4</p>
+    <a>
+        <p>Nội dung p cấp 1 </p>
+        <p>cũng là p cấp 1</p>
+        <section>
+            <p>Nd p cấp 2</p>
+        </section>
+    </a>
+    <p>hi</p>
+    <div> 2</div>
+    <header>
+        <p>dùng Descendant selectors (Bộ chọn hậu duệ)
+        </p>
+        <p>tất cả các con của tag1 sẽ đổi màu</p>
+        <section>
+            <p>kể cả các cấp của p</p>
+            <section>
+                <p>cấp 3 cũng vậy</p>
+                <a>trừ không phải tag02</a>
+            </section>
+        </section>
+
+    </header>
+</body>
+</html>

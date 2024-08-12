@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            color: black;
+            /* mặc định là blue */
+        }
+        a:link{
+            color:blue;
+        }
+        a:visited{
+            color:greenyellow
+            /* sau khi đã ghé thăm dù load lại thì vẫn có màu này 
+            chỉ có cách là đổi link href mới thấy đc màu a:link đầu tiên */
+        }
+        a:hover{
+            /* hover thì khi di trỏ đến dòng link ( chưa bấm cũng hiện đổi) */
+            color: blueviolet;
+        }
+        .box1{
+            background-color: bisque;
+            border: 2px solid black;
+        }
+        .box1:hover{
+            background-color: red;
+        }
+        .box1 i{
+            display: none;
+            /* cho icon này ẩn */
+        }
+        .box1:hover i{
+            display: inline;
+            /* khi trỏ vào cho icon này hiện */
+        }
+        .box1:active{
+            /* khi click vào và giữ thì sẽ css như vậy */
+            background-color: darkorange;
+        }
+
+        ul li:first-child{
+            background-color: gold;
+        }
+        ul li:last-child{
+            color: chartreuse;
+        }
+        ul li:nth-child(2n+3){
+            /* có thể dùng even (chẵn), odd (lẻ), một số cụ thể với số đầu là 1*/
+            color: aqua;
+        }
+
+        /* Đây là một element giả không phải <p> cũng ko phải <span> nhưng là
+            1 inline */
+        .box2::before{
+            content: "Nội dung đằng trước";
+            background-color: rgb(104, 104, 254);
+        }
+        .box2::after{
+            content: " nội dung đằng sau";
+            /* dùng cách này thì css dễ dàng hơn */
+            background-color: red;
+            display: inline-block;
+            /* phải chỉnh display mới di chuyển đc (mặc định là inline) */
+            margin-top: 20px ;
+            margin-left: 60px;
+
+        }
+        .box2::first-letter{
+            font-size: xx-large;
+            /* chữ cái đầu tiên */
+        }
+        .lor::first-line{
+            text-transform: uppercase;
+            /* dòng đầu tiên sẽ in hoa */
+        }
+        .mark li::marker{
+            /* css cho các list (ol hoặc ul) */
+            color:red;
+            font-size: 50px;
+        }
+        .selecti{
+            /* làm mờ chữ  */
+            opacity: 0.5;            
+        }
+        .selecti::selection{
+            background-color: aquamarine;
+            color: rgb(255, 0, 251);
+
+        }
+    </style>
+</head>
+<body>
+    <a href="Selectors.html">
+        Link sang Selector
+    </a>
+    <a href="#126">Link tinh</a>
+    <div class="box1">ND BOX !
+        <p>Nội dung box</p>
+        <i>Icon Ẩn</i>
+    </div>
+    <ul>
+        <li>Một sẽ đc first-child trỏ tới</li>
+        <li>hai</li>
+        <li>Pa</li>
+        <li>4 sẽ đc last-child trỏ tới</li>
+    </ul>
+    <div class="box2">
+        <!-- <span>Nội dung đằng trước</span> 
+        rồi css .box2 span{} -->
+        <!-- song ta có thể dùng cách khác -->
+        ND1</div>
+        <div class="lor">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia eius iusto porro sequi exercitationem repellendus ratione, ipsam odio suscipit harum a impedit autem distinctio, reprehenderit qui libero perspiciatis nobis perferendis?</div>
+        <ul class="mark">
+            <li>Một</li>
+            <li>Hai</li>
+            <li>Ba</li>
+        </ul>
+    <p class="selecti">Text khi kéo dài trỏ thì đổi màu Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia corrupti officiis modi soluta distinctio iste harum rerum, quod libero? Nostrum a minima similique perferendis error earum voluptates ullam vel?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia provident nemo iusto iure omnis labore repellendus quo. Eaque quod ipsa expedita omnis. Dolorum iste doloremque perferendis, harum rem sit dicta?
+
+    </p>
+</body>
+</html>
