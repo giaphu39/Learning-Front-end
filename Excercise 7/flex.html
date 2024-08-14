@@ -53,6 +53,58 @@
             flex-wrap: wrap-reverse;
             /* nhảy lên trên giá trị thay vì xuống dưới */
         }
+        .box4{
+            display: flex;
+            /* nếu flex-direction: row-reverse; 
+            thì sẽ vừa canh lề từ phải vừa đổi thứ tự */
+            flex-direction: row;
+            /* trở lại mặc định */
+
+            justify-content: flex-end;
+            /* canh lề cho các item con sang vị trí end làm bắt đầu */
+
+            justify-content: center;
+            /* canh giữa */
+            justify-content: space-between;
+            /* canh giữa và có khoảng cách bằng nhau giữa các item, item đầu và cuối
+            sát lề*/
+            justify-content: space-around;
+            /* giống space-between mà Khoảng cách 
+            giữa item và lề = 1/2 khoảng cách giữa item và item. */
+            justify-content: space-evenly;
+            /* giống space-between mà Khoảng cách 
+            giữa item và lề =  khoảng cách giữa item và item. */
+        }
+        .box5{
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            /* trong align-item nếu chọn khác kiểu stretch thì item không đi height
+            theo container nữa; */
+            align-items: flex-end;
+            /* căn lề theo trục đứng, chỉ dùng cho các item nằm trên 1 dòng
+            vì nếu dùng cho item trên nhiều dòng thì mỗi dòng cách nhau 1 khoảng 
+            trống */
+            /* còn lại các thuộc tính của align-items giống justify-content: ; */
+        }
+        .box6{
+            height: 500px;
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            /* giống align-items: mà dùng cho nhiều dòng và các dòng không cách nhau; */
+            
+        }
+        /* 1.2.7: align-self dùng cho 1 đối tượng riêng lẻ*/
+        .box6 .item:nth-child(3){
+            align-self: stretch!important;
+        }
+        .box6 .item:nth-child(1){
+            order: 5;
+            /* do các item còn lại mặc định là 0 nên item 1 có order lớn nhất */
+            /* cái nào viết trước cùng order thì viết lên trước */
+        }
     </style>
 </head>
 <body>
@@ -67,6 +119,7 @@
         <div class="item">item 3</div>
     </div>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nemo officia accusamus libero dolorem animi recusandae magnam sunt amet aliquid. Perspiciatis consectetur natus vitae libero modi, possimus odio velit esse!</p>
+    <p>Box3</p>
     <div class="container ba">
         <div class="item">item 1</div>
         <div class="item">item 2</div>
@@ -78,6 +131,28 @@
         <!-- tới thêm tới đây thì item tự co lại vẫn nằm trên một hàng 
         do flex-wrap: nowrap -->
         <div class="item">item 8</div>
-    </div>   
+    </div>  
+    <p>box4: justify-content </p>
+    <div class="container box4">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+    <p>box5: align-items giống justify-content mà căn theo chiều dọc </p>
+    <div class="container box5">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div> 
+
+    <p>Box2.6: căn dọc cho nhiều hàng item và có 1 cái đặc biệt(align-self)</p>
+    <div class="container box6">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item" style="align-self: flex-end;">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
 </body>
 </html>
